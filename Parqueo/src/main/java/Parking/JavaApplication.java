@@ -1,16 +1,17 @@
-package com.example.parqueo;
+package Parking;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
-public class ParqueoApplication {
+public class JavaApplication {
 
     public static void main(String[] args) {
 
 
-        SpringApplication.run(ParqueoApplication.class, args);
-        System.out.println("HolDiego");
+        SpringApplication.run(JavaApplication.class, args);
+
     }
 
 }

@@ -1,19 +1,16 @@
-package Controladores;
+package Parking.Controladores;
 
-import Entidades.Carro;
-import Servicios.ServicioParqueo;
+import Parking.Entidades.Carro;
+import Parking.Servicios.ServicioParqueo;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
+
 @RestController
-@RequestMapping
+@RequestMapping("/parqueo")
 public class ControlParqueo {
 
     private final ServicioParqueo servicioParqueo;
@@ -24,11 +21,11 @@ public class ControlParqueo {
 
     @GetMapping("/carros")
     public ResponseEntity<ArrayList<Carro>> getListaParqueos(){
-        return ResponseEntity.ok(this.servicioParqueo.getListaParqueos());
+        return ResponseEntity.ok(this.servicioParqueo.getListaParqueos ());
     }
 
     @PostMapping("/carros")
-    public ResponseEntity<Carro> addParqueo(Carro c){
+    public ResponseEntity<Carro> addParqueo(@RequestBody Carro c){
         this.servicioParqueo.agregarParqueo(c);
         return new ResponseEntity<>(c, HttpStatus.CREATED);
     }

@@ -1,8 +1,10 @@
-package Servicios;
-import Entidades.Carro;
+package Parking.Servicios;
+import Parking.Entidades.Carro;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service
 public class ServicioParqueo {
 
 
@@ -11,7 +13,7 @@ public class ServicioParqueo {
 
 
     public ServicioParqueo(){
-        listaParqueos=null;
+        this.listaParqueos=new ArrayList<>();
     }
     //TODO: HISTORA DE USUARIO 4
     //Como usuario, quiero poder agregar un auto al parqueo, para poder estacionar
@@ -25,7 +27,7 @@ public class ServicioParqueo {
     //estacionamiento.
 
     public ArrayList<Carro> getListaParqueos() {
-        return listaParqueos;
+        return this.listaParqueos;
     }
 
     public void setListaParqueos(ArrayList<Carro> listaParqueos) {

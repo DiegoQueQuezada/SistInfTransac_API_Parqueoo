@@ -1,4 +1,4 @@
-package Entidades;
+package Parking.Entidades;
 
 import java.time.LocalDateTime;
 
@@ -8,7 +8,10 @@ public class Carro {
     private String color;
     private LocalDateTime fechaTiempo;
 
-
+    public Carro(String licencia, String color) {
+        this.licencia = licencia;
+        this.color = color;
+    }
 
     public String getColor() {
         return color;

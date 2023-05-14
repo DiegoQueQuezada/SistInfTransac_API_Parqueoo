@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "5ad5e211-d15c-42e9-ab18-8d7afba74229",
+		"name": "Parqueos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "feat:añadirParqueo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"licencia\":\"ABC-123\"\r\n    \"color\":\"azul\"    \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/parqueo/carros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parqueo",
+						"carros"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarParqueos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/parqueo/carros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parqueo",
+						"carros"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
